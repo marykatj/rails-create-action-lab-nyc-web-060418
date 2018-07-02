@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+
   def index
     @students = Student.all
   end
@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(params)
     @student.name = students[:name]
-    @student.save 
+    @student.save
     redirect_to students_path
   end
 
